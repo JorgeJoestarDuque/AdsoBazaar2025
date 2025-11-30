@@ -1,46 +1,36 @@
 {
   "usuario": [
     {
-      "NIT": "8716420",
-      "Nombre": "Bennie Mraz",
-      "Rol": "Chief Creative Strategist",
-      "Telefono": "(854) 807-6666 x4088",
-      "Email": "Elian.Schneider80@yahoo.com"
-    },
-    {
-      "NIT": "8960343",
-      "Nombre": "Orlando Turcotte",
-      "Rol": "Corporate Intranet Engineer",
-      "Telefono": "463-445-3046",
-      "Email": "Carissa85@gmail.com"
-    },
-    {
-      "NIT": "2798212",
-      "Nombre": "Rochelle Torphy III",
-      "Rol": "Legacy Solutions Designer",
-      "Telefono": "614.935.4690 x650",
-      "Email": "Breana_Nader@gmail.com"
-    },
-    {
-      "NIT": "7841910",
-      "Nombre": "Randolph Wunsch MD",
-      "Rol": "Dynamic Applications Officer",
-      "Telefono": "874-573-7939 x4360",
-      "Email": "Kamryn41@gmail.com"
-    },
-    {
-      "NIT": "3760603",
-      "Nombre": "Dr. Nathan Marquardt",
-      "Rol": "Direct Assurance Analyst",
-      "Telefono": "968-438-9568 x040",
-      "Email": "Kellen34@hotmail.com"
+      "Email": "julian@gmail.com",
+      "NIT": "31343241341",
+      "Nombre": "julian Roa",
+      "Telefono": "231231412",
+      "Direccion": "Calle 321",
+      "Contrasena": "Qazplm123$"
     },
     {
       "NIT": "1010841138",
-      "Email": "jorge@gmail.com",
       "Nombre": "Jorge Duque",
+      "Email": "jorge.duque@hablame.co",
+      "Rol": "admin",
       "Telefono": "3172338598",
-      "Direccion": "Calle 123"
+      "Contrasena": "Qazplm123$"
+    },
+    {
+      "NIT": "1029302391",
+      "Nombre": "Julian Roa",
+      "Email": "jejulians@gmail.com",
+      "Rol": "admin",
+      "Telefono": "3163941080",
+      "Contrasena": "Qazplm123$"
+    },
+    {
+      "NIT": "10101010101",
+      "Nombre": "Anderson Anderson",
+      "Email": "Anderson@anderson.anderson",
+      "Rol": "admin",
+      "Telefono": "3123124312",
+      "Contrasena": "Anderson"
     }
   ],
   "proveedor": [
