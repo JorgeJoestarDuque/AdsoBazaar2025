@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario</title>
+    <link rel="stylesheet" href="CSS/CSS - Inventario.css">
+    <link rel="shortcut icon" href="Imagenes/Icono - inventario.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<!-- Inicio de Body (Habran partes deparadas para saber que parte representa a esa parte de la pagina) -->
+<body>
+  <!-- Barra Lateral -->
+
+<div class="sidebar">
+  <div class="user">
+    <img src="Imagenes/Usuario.png" alt="Usuario">
+  </div>
+  
+  <ul class="menu">
+    <li><img src="Imagenes/Home.png" alt="Inicio"></li>
+    <li><img src="Imagenes/Finanza.png" alt="Dinero"></li>
+    <li><img src="Imagenes/Caja.png" alt="Caja"></li>
+  </ul>
+  
+  <div class="settings">
+    <img src="Imagenes/Configuracion.png" alt="Configuración">
+  </div>
+</div>
+<!-- Barra superior junto a barra de busqueda y botones-->
+
+<div class="topbar">
+  <img src="Imagenes/Logo Bazar.png" alt="Logo de la empresa">
+</div>
+
+<div class="contenido">
+
+<div class="acciones">
+  <input type="text" placeholder="Buscar producto..." class="busqueda">
+  
+  <div class="botones">
+  <button class="btn agregar" onclick="openModal('modal-add')">Añadir producto</button>
+  <button class="btn eliminar" onclick="openModal('modal-delete')">Eliminar producto</button>
+
+  </div>
+</div>
+<!-- Contenido General -->
+
+  <h2 class="titulo-productos">Todos de productos en Bodega</h2>
+  <table class="tabla-productos">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Cantidad</th>
+      <th>Marca</th>
+      <th>Tipo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Nombre del producto</td>
+      <td>#</td>
+      <td>Marca</td>
+      <td>Tipo</td>
+      <td class="acciones">
+        <button class="btn-accion editar"></button>
+        <button class="btn-accion eliminar"></button>
+      </td>
+    </tr>
+    <tr>
+      <td>Nombre del producto</td>
+      <td>#</td>
+      <td>Marca</td>
+      <td>Tipo</td>
+      <td class="acciones">
+        <button class="btn-accion editar"></button>
+        <button class="btn-accion eliminar"></button>
+      </td>
+    </tr>
+    <tr>
+      <td>Nombre del producto</td>
+      <td>#</td>
+      <td>Marca</td>
+      <td>Tipo</td>
+      <td class="acciones">
+        <button class="btn-accion editar"></button>
+        <button class="btn-accion eliminar"></button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<!-- Modal para Añadir Producto -->
+<div id="modal-add" class="modal">
+  <div class="modal-content">
+    <span class="close" data-modal="modal-add">&times;</span>
+<h2 class="modal-title">Registro</h2>
+
+<form id="form-add" class="form-registro">
+  <div class="form-grid">
+    <div class="form-field">
+      <label for="tipo">Tipo</label>
+      <input id="tipo" name="tipo" type="text" placeholder="Cereal">
+    </div>
+
+    <div class="form-field">
+      <label for="gramaje">Gramaje</label>
+      <input id="gramaje" name="gramaje" type="text" placeholder="100 gr">
+    </div>
+
+    <div class="form-field">
+      <label for="marca">Marca</label>
+      <input id="marca" name="marca" type="text" placeholder="Diana">
+    </div>
+
+    <div class="form-field">
+      <label for="fecha">Fecha de vencimiento</label>
+      <input id="fecha" name="fecha" type="date">
+      
+    </div>
+
+    <div class="form-field">
+      <label for="lote">Lote</label>
+      <input id="lote" name="lote" type="text" placeholder="gr29">
+    </div>
+
+    <div class="form-field">
+      <label for="nombre">Nombre del producto</label>
+      <input id="nombre" name="nombre" type="text" placeholder="Arroz">
+    </div>
+
+    <!-- Cantidad a lo ancho de las dos columnas -->
+    <div class="form-field full">
+      <label for="cantidad">Cantidad</label>
+      <input id="cantidad" name="cantidad" type="number" min="0" placeholder="890">
+    </div>
+  </div>
+
+  <div class="acciones-form">
+    <button type="button" class="btn-registrar">Registrar</button>
+  </div>
+</form>
+
+  </div>
+</div>
+
+<!-- Modal para Eliminar Producto -->
+<div id="modal-delete" class="modal">
+  <div class="modal-content">
+    <span class="close" data-modal="modal-delete">&times;</span>
+    <h2>Eliminar Producto</h2>
+    <p>Aquí irá la confirmación para eliminar un producto.</p>
+  </div>
+</div>
+
+
+  
+<!-- Modal para Eliminar Producto -->
+<div id="modal-delete" class="modal">
+  <div class="modal-content">
+    <span class="close" data-modal="modal-delete">&times;</span>
+    <h2>Eliminar Producto</h2>
+    <p>Aquí irá la confirmación para eliminar un producto.</p>
+  </div>
+</div>
+
+<!-- Mover modal de éxito fuera del <script> -->
+<div id="modalExito" class="modal-exito">
+  <div class="modal-exito-content">
+    <h2>✔ Registro exitoso</h2>
+    <p>El producto fue registrado correctamente.</p>
+    <button onclick="cerrarModalExito()">Aceptar</button>
+  </div>
+</div>
+
+<script>
+  // Función para abrir un modal
+  function openModal(id) {
+    document.getElementById(id).style.display = "block";
+  }
+
+  // Función para cerrar un modal
+  function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+  }
+
+  // Detectar clics en los botones cerrar
+  document.querySelectorAll('.close').forEach(btn => {
+    btn.addEventListener('click', () => {
+      closeModal(btn.getAttribute('data-modal'));
+    });
+  });
+
+  // Cerrar si se hace clic fuera del modal
+  window.addEventListener('click', (e) => {
+    if (e.target.classList.contains('modal')) {
+      e.target.style.display = 'none';
+    }
+  });
+</script>
+
+<!-- incluir archivo JS de la funcionalidad -->
+<script src="inventario.js"></script>
+</body>
+</body>
+</html>

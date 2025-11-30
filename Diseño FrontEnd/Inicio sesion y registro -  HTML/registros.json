@@ -1,0 +1,12 @@
+{
+    "Usuario": [
+        {
+            "id": 1,
+            "nombre": "",
+            "correo": "",
+            "rol": "",
+            "nid": "",
+            "contraseña": ""
+        }
+    ]
+}

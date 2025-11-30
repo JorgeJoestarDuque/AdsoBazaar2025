@@ -1,0 +1,271 @@
+{
+  "usuario": [
+    {
+      "Email": "julian@gmail.com",
+      "NIT": "31343241341",
+      "Nombre": "julian Roa",
+      "Telefono": "231231412",
+      "Direccion": "Calle 321",
+      "Contrasena": "Qazplm123$"
+    },
+    {
+      "NIT": "1010841138",
+      "Nombre": "Jorge Duque",
+      "Email": "jorge.duque@hablame.co",
+      "Rol": "admin",
+      "Telefono": "3172338598",
+      "Contrasena": "Qazplm123$"
+    },
+    {
+      "NIT": "1029302391",
+      "Nombre": "Julian Roa",
+      "Email": "jejulians@gmail.com",
+      "Rol": "admin",
+      "Telefono": "3163941080",
+      "Contrasena": "Qazplm123$"
+    },
+    {
+      "NIT": "10101010101",
+      "Nombre": "Anderson Anderson",
+      "Email": "Anderson@anderson.anderson",
+      "Rol": "admin",
+      "Telefono": "3123124312",
+      "Contrasena": "Anderson"
+    }
+  ],
+  "proveedor": [
+    {
+      "NIP": "36614",
+      "NIT": "9525321",
+      "Nombre": "Weissnat - Volkman",
+      "Telefono": "(309) 742-6159 x799"
+    },
+    {
+      "NIP": "68494",
+      "NIT": "8234432",
+      "Nombre": "Christiansen - Douglas",
+      "Telefono": "1-372-677-3913 x922"
+    },
+    {
+      "NIP": "89671",
+      "NIT": "164428",
+      "Nombre": "Hessel, Kuhic and McGlynn",
+      "Telefono": "935.393.7747"
+    },
+    {
+      "NIP": "85216",
+      "NIT": "1339890",
+      "Nombre": "Ortiz and Sons",
+      "Telefono": "664-935-8653 x6540"
+    },
+    {
+      "NIP": "17725",
+      "NIT": "2013400",
+      "Nombre": "Bogan - McClure",
+      "Telefono": "504-861-1137"
+    }
+  ],
+  "lote": [
+    {
+      "Id_Lote": "1",
+      "Cantidad": "1",
+      "Tipo": "commerce.product",
+      "Precio_Compra": "589.3839451630422",
+      "NIP_Proveedor": "15067"
+    },
+    {
+      "Id_Lote": "0",
+      "Cantidad": "1",
+      "Tipo": "commerce.product",
+      "Precio_Compra": "113.29478859429088",
+      "NIP_Proveedor": "95659"
+    },
+    {
+      "Id_Lote": "1",
+      "Cantidad": "0",
+      "Tipo": "commerce.product",
+      "Precio_Compra": "302.26701329072324",
+      "NIP_Proveedor": "92383"
+    },
+    {
+      "Id_Lote": "0",
+      "Cantidad": "1",
+      "Tipo": "commerce.product",
+      "Precio_Compra": "237.872093260023",
+      "NIP_Proveedor": "78990"
+    },
+    {
+      "Id_Lote": "0",
+      "Cantidad": "0",
+      "Tipo": "commerce.product",
+      "Precio_Compra": "839.6907107102313",
+      "NIP_Proveedor": "16085"
+    }
+  ],
+  "producto": [
+    {
+      "idProducto": "0",
+      "nombre": "Modern Bronze Fish",
+      "precioVenta": "567.9910601871943",
+      "cantidad": "1",
+      "fechaCaducidad": "Sun Jul 19 2026 00:08:04 GMT-0500 (hora estándar de Colombia)",
+      "Id_Lote": "0"
+    },
+    {
+      "idProducto": "0",
+      "nombre": "Luxurious Bamboo Fish",
+      "precioVenta": "786.3266031926875",
+      "cantidad": "1",
+      "fechaCaducidad": "Wed Dec 24 2025 05:52:40 GMT-0500 (hora estándar de Colombia)",
+      "Id_Lote": "1"
+    },
+    {
+      "idProducto": "1",
+      "nombre": "Awesome Cotton Gloves",
+      "precioVenta": "643.6320332979549",
+      "cantidad": "1",
+      "fechaCaducidad": "Sat Jan 24 2026 04:55:21 GMT-0500 (hora estándar de Colombia)",
+      "Id_Lote": "0"
+    },
+    {
+      "idProducto": "0",
+      "nombre": "Intelligent Wooden Ball",
+      "precioVenta": "691.4713311581713",
+      "cantidad": "1",
+      "fechaCaducidad": "Sat Apr 04 2026 12:02:35 GMT-0500 (hora estándar de Colombia)",
+      "Id_Lote": "1"
+    },
+    {
+      "idProducto": "1",
+      "nombre": "Unbranded Silk Soap",
+      "precioVenta": "745.3155295613363",
+      "cantidad": "0",
+      "fechaCaducidad": "Wed Apr 15 2026 16:50:30 GMT-0500 (hora estándar de Colombia)",
+      "Id_Lote": "0"
+    },
+    {
+      "tipo": "Granos",
+      "gramaje": "123gr",
+      "marca": "Roa",
+      "fechaVencimiento": "2026-03-17",
+      "lote": "gr123",
+      "nombre": "Lentejas",
+      "cantidad": 982,
+      "idProducto": "1764474459971",
+      "id": 1764474459971
+    }
+  ],
+  "inventario": [
+    {
+      "idInventario": "0",
+      "fechaCreacion": "Tue Sep 02 2025 03:17:29 GMT-0500 (hora estándar de Colombia)",
+      "idProducto": "0",
+      "NIT": "7640686"
+    },
+    {
+      "idInventario": "1",
+      "fechaCreacion": "Wed Nov 12 2025 12:15:26 GMT-0500 (hora estándar de Colombia)",
+      "idProducto": "1",
+      "NIT": "51731"
+    },
+    {
+      "idInventario": "0",
+      "fechaCreacion": "Sun Jan 26 2025 14:15:52 GMT-0500 (hora estándar de Colombia)",
+      "idProducto": "1",
+      "NIT": "4636072"
+    },
+    {
+      "idInventario": "0",
+      "fechaCreacion": "Sun Apr 27 2025 21:43:45 GMT-0500 (hora estándar de Colombia)",
+      "idProducto": "1",
+      "NIT": "8095506"
+    },
+    {
+      "idInventario": "1",
+      "fechaCreacion": "Tue Apr 29 2025 18:05:48 GMT-0500 (hora estándar de Colombia)",
+      "idProducto": "0",
+      "NIT": "1172054"
+    }
+  ],
+  "factura": [
+    {
+      "NumeroFactura": "0",
+      "Creacion": "Fri Nov 14 2025 22:34:16 GMT-0500 (hora estándar de Colombia)",
+      "IdProducto": "1",
+      "Precio": "374.1896610683216",
+      "NIT_Cajero": "1647733"
+    },
+    {
+      "NumeroFactura": "1",
+      "Creacion": "Sat Nov 15 2025 04:44:57 GMT-0500 (hora estándar de Colombia)",
+      "IdProducto": "0",
+      "Precio": "137.82745339064317",
+      "NIT_Cajero": "9415205"
+    },
+    {
+      "NumeroFactura": "0",
+      "Creacion": "Sat Nov 15 2025 14:50:02 GMT-0500 (hora estándar de Colombia)",
+      "IdProducto": "0",
+      "Precio": "210.59920239109343",
+      "NIT_Cajero": "6850364"
+    },
+    {
+      "NumeroFactura": "1",
+      "Creacion": "Sat Nov 15 2025 03:21:13 GMT-0500 (hora estándar de Colombia)",
+      "IdProducto": "0",
+      "Precio": "972.2975037406088",
+      "NIT_Cajero": "7297139"
+    },
+    {
+      "NumeroFactura": "1",
+      "Creacion": "Fri Nov 14 2025 17:09:32 GMT-0500 (hora estándar de Colombia)",
+      "IdProducto": "0",
+      "Precio": "234.8587493080526",
+      "NIT_Cajero": "3576183"
+    }
+  ],
+  "facturasalida": [
+    {
+      "Id_FacturaSalida": "0",
+      "NumeroFactura": "1"
+    },
+    {
+      "Id_FacturaSalida": "0",
+      "NumeroFactura": "0"
+    },
+    {
+      "Id_FacturaSalida": "1",
+      "NumeroFactura": "0"
+    },
+    {
+      "Id_FacturaSalida": "1",
+      "NumeroFactura": "1"
+    },
+    {
+      "Id_FacturaSalida": "0",
+      "NumeroFactura": "1"
+    }
+  ],
+  "informe": [
+    {
+      "Id_Informe": "0",
+      "Id_Inventario": "1"
+    },
+    {
+      "Id_Informe": "0",
+      "Id_Inventario": "1"
+    },
+    {
+      "Id_Informe": "0",
+      "Id_Inventario": "0"
+    },
+    {
+      "Id_Informe": "1",
+      "Id_Inventario": "0"
+    },
+    {
+      "Id_Informe": "1",
+      "Id_Inventario": "1"
+    }
+  ]
+}

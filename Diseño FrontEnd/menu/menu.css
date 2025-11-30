@@ -1,0 +1,84 @@
+#menu {
+    overflow: initial;
+    color: rgb(230, 230, 230);
+    display: flex;
+    align-items:space-between;
+    justify-content: space-between;
+    padding: 50px 50px;
+    gap: 30px;
+    flex-flow: row wrap;
+    
+}
+
+#inventario {
+    background-color: rgba(146, 23, 23, 0.767);
+    width: 200px;
+    height: 300px;
+    display: grid;
+    border-radius: 20px;
+    padding: 20px;
+    justify-items: stretch;
+}
+
+#estadisticas {
+    background-color: rgba(146, 23, 23, 0.767);
+    width: 200px;
+    height: 300px;
+    padding: 20px;
+    display: grid;
+    border-radius: 20px;
+    justify-items: stretch;
+}
+
+#empleados {
+    background-color: rgba(146, 23, 23, 0.767);
+    display:block;
+    width: 200px;
+    height: 300px;
+    color: yellow;
+    padding: 20px 20px 50px 20px;
+    border-radius: 20px;
+    
+    justify-items: stretch;
+    text-align: justify;
+}
+
+#proveedores {
+    background-color: rgba(146, 23, 23, 0.767);
+    display: block;
+    width: 200px;
+    height: 300px;
+    padding: 20px;
+    border-radius: 20px;
+    justify-items: normal;
+}
+
+p {/* Limita el ancho */
+    word-wrap: break-word; /* Permite cortar palabras largas */
+    text-align: justify; /* Justifica el texto */
+}
+
+img{
+    max-width: 100%;
+    max-height:100%; /* Asegura que la imagen no exceda el ancho del contenedor */ 
+}
+
+button{
+    border-radius: 20px ;
+}
+body {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Lato", sans-serif;
+    background-color: #ffffff;
+}
+
+#titulo{
+    text-align: center;
+    color: #8b0000;
+    text-shadow: 3px 5px 8px rgb(190, 71, 71);
+    font-size: 25px;
+    margin-top: 20px;
+}

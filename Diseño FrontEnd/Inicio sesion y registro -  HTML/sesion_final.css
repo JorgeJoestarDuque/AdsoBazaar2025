@@ -1,0 +1,146 @@
+/* Combined CSS — merged from sesión1.css and sesion.css
+   Duplicated selectors/properties were unified (keeps a single consistent rule).
+*/
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  color: #800000;
+}
+
+/* Barra superior */
+.topbar {
+  display: flex;
+  justify-content: flex-end; /* Alinea el contenido a la derecha */
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 2px solid #ccc;
+}
+
+.topbar img {
+  width: 100px; /* tamaño del logo mini */
+  height: auto;
+}
+
+.topbar .logo-mini {
+  font-weight: bold;
+  font-size: 14px;
+  border: 2px solid #800000;
+  padding: 5px 10px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.topbar .logo-mini span {
+  display: block;
+  font-size: 10px;
+  font-weight: normal;
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto; /* baja el formulario para que no quede pegado arriba */
+}
+
+/* Logo principal: soporta ambas variantes (imagen o texto con borde) */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 22px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
+
+.logo img {
+  width: 300px; /* Tamaño del logo grande cuando se usa imagen */
+  height: auto;
+}
+
+.logo span {
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: -5px;
+}
+
+h1 {
+  font-size: 26px;
+  margin: 5px 0;
+}
+
+p {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin: 8px 0 4px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #800000;
+  border-radius: 2px;
+  margin-bottom: 12px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+  border-color: #b30000;
+}
+
+.forgot {
+  display: block;
+  text-align: left;
+  font-size: 12px;
+  margin-bottom: 20px;
+  color: #800000;
+  text-decoration: none;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+button {
+  width: 100%;
+  background-color: #800000;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+button:hover {
+  background-color: #a00000;
+}
+
+/* Asegurar consistencia en formularios */
+form label {
+  text-align: left;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+form input,
+form select,
+form button {
+  width: 100%;       /* Todos ocupan el mismo ancho */
+  box-sizing: border-box; /* Incluye padding y borde en el ancho */
+}
