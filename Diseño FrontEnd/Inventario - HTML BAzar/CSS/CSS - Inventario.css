@@ -129,46 +129,145 @@ body {
   margin: 50px 0 60px;
 }
 
+/* -------------------------
+   Mejora visual: tabla y módulo
+   ------------------------- */
+
+/* contenedor para centrar la tabla y darle espacio */
 .tabla-productos {
-  width: 90%;
-  margin: 0 auto 40px auto;
-  border-collapse: collapse;
-  text-align: center;
+  width: calc(100% - 260px); /* mantiene margen lateral sin romper diseño */
+  margin: 20px auto 40px auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: left;
   font-family: Arial, sans-serif;
-  margin-left: 200px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  border-radius: 10px;
+  overflow: hidden; /* redondeado en thead/tbody */
 }
 
-.tabla-productos th,
+/* cabecera: color consistente con marca, texto en blanco */
+.tabla-productos thead th {
+  background: linear-gradient(180deg, #8B0000 0%, #6f0000 100%);
+  color: #fff;
+  font-weight: 700;
+  padding: 14px 18px;
+  letter-spacing: 0.02em;
+  font-size: 15px;
+  border-bottom: 2px solid rgba(0,0,0,0.06);
+}
+
+/* celdas */
 .tabla-productos td {
-  border: 2px solid #000;
-  padding: 10px;
-  font-size: 16px;
+  padding: 12px 18px;
+  font-size: 15px;
+  color: #222;
+  vertical-align: middle;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  background: #fff;
 }
 
-.tabla-productos th {
-  background-color: #fff;
-  font-weight: bold;
+/* filas zebra y hover */
+.tabla-productos tbody tr:nth-child(even) td {
+  background: #fbfbfb;
+}
+.tabla-productos tbody tr:hover td {
+  background: linear-gradient(90deg, rgba(255,245,245,0.8), #fff);
+  transform: translateY(-1px);
+  transition: background 120ms ease, transform 120ms ease;
 }
 
-.acciones {
-  display: flex;
-  justify-content: center;
-  gap: 5px;
+/* columna de acciones: alineado y espacio para los iconos */
+.tabla-productos td.acciones,
+.tabla-productos td:last-child {
+  text-align: center;
+  width: 110px;
+  white-space: nowrap;
+  border-bottom: none;
 }
 
+/* reproducir estilo de iconos: botones pequeños, sin texto visible */
 .btn-accion {
-  width: 24px;
-  height: 24px;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
   border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
   cursor: pointer;
+  padding: 0;
+  margin: 0 4px;
+  transition: background 160ms ease, transform 120ms ease;
+  font-size: 0; /* ocultar texto si lo hubiera */
 }
 
-.btn-accion.editar {
-  background: url('https://cdn-icons-png.flaticon.com/512/84/84380.png') no-repeat center/cover;
+/* hover para botones de acción */
+.btn-accion:hover {
+  background: rgba(0,0,0,0.06);
+  transform: translateY(-2px);
 }
 
+/* asegurar que los iconos de fondo escalen correctamente */
+.btn-accion.editar,
 .btn-accion.eliminar {
-  background: url('https://cdn-icons-png.flaticon.com/512/1214/1214428.png') no-repeat center/cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 18px;
+}
+
+/* si se usan imágenes externas ya definidas, mantenerlas; alternativa visual */
+.btn-accion.editar {
+  /* ejemplo local: lápiz */
+  background-image: url('https://cdn-icons-png.flaticon.com/512/84/84380.png');
+}
+.btn-accion.eliminar {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/1214/1214428.png');
+}
+
+/* mejorar aspecto del buscador */
+.busqueda {
+  max-width: 480px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04) inset;
+  font-size: 15px;
+  transition: box-shadow 140ms ease, border-color 140ms ease;
+}
+.busqueda:focus {
+  outline: none;
+  border-color: rgba(139,0,0,0.9);
+  box-shadow: 0 6px 20px rgba(139,0,0,0.06);
+}
+
+/* refinar botones primarios (añadir/eliminar) sin cambiar colores base */
+.btn.agregar, .btn.eliminar {
+  padding: 10px 16px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+.btn.agregar:hover, .btn.eliminar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* modal: suavizar sombra y centrar mejor */
+.modal-content {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+  border-radius: 12px;
+}
+
+/* responsividad: tabla en pantallas pequeñas */
+@media (max-width: 900px) {
+  .tabla-productos {
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .tabla-productos thead th, .tabla-productos td { padding: 10px; font-size: 14px; }
+  .tabla-productos td.acciones { width: 90px; }
 }
 
 /* Fondo oscuro modal */

@@ -147,11 +147,15 @@
 </div>
 
 <!-- Modal para Eliminar Producto -->
-<div id="modal-delete" class="modal">
+<div id="modal-delete" class="modal" style="display:none;">
   <div class="modal-content">
     <span class="close" data-modal="modal-delete">&times;</span>
-    <h2>Eliminar Producto</h2>
-    <p>Aquí irá la confirmación para eliminar un producto.</p>
+    <h3>Confirmar eliminación</h3>
+    <p id="modal-delete-text">¿Eliminar producto?</p>
+    <div style="display:flex; gap:8px; justify-content:flex-end; margin-top:12px;">
+      <button id="modal-delete-cancel" class="btn" type="button">Cancelar</button>
+      <button id="modal-delete-confirm" class="btn btn-eliminar" type="button">Eliminar</button>
+    </div>
   </div>
 </div>
 
@@ -181,5 +185,8 @@
     }
   });
 </script>
+
+<!-- cargar lógica de inventario (no cambia estética) -->
+<script src="Imagenes/inventario.js"></script>
 </body>
 </html>
