@@ -11,51 +11,62 @@
 }
 
 #inventario {
-    background-color: rgba(146, 23, 23, 0.767);
+    background-color: #a00000;
     width: 200px;
     height: 300px;
     display: grid;
-    border-radius: 20px;
+    border-radius: 10px;
+    border: 4px solid black;    
     padding: 20px;
     justify-items: stretch;
 }
 
 #estadisticas {
-    background-color: rgba(146, 23, 23, 0.767);
+    background-color: #a00000;
     width: 200px;
     height: 300px;
     padding: 20px;
     display: grid;
-    border-radius: 20px;
+    border-radius: 10px;
+    border: 4px solid black;
     justify-items: stretch;
 }
 
 #empleados {
-    background-color: rgba(146, 23, 23, 0.767);
+    background-color: #a00000;
     display:block;
     width: 200px;
-    height: 300px;
+    height: 290px;
     color: yellow;
     padding: 20px 20px 50px 20px;
-    border-radius: 20px;
-    
+    border-radius: 10px;
+    border: 4px solid black;
     justify-items: stretch;
-    text-align: justify;
+}
+
+#empleados img {
+    max-width: 100%;
+    max-height: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */ 
+    border-radius:7px;
 }
 
 #proveedores {
-    background-color: rgba(146, 23, 23, 0.767);
+    background-color: #a00000;
     display: block;
     width: 200px;
     height: 300px;
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 10px;
+    border: 4px solid black;
     justify-items: normal;
 }
+
 
 p {/* Limita el ancho */
     word-wrap: break-word; /* Permite cortar palabras largas */
     text-align: justify; /* Justifica el texto */
+    font-family: Arial, sans-serif;
+    color: white;
 }
 
 img{
@@ -65,20 +76,70 @@ img{
 
 button{
     border-radius: 20px ;
+    border: 5px solid #000000;
 }
+
+button:hover{
+    transition: 0.3s;
+    transform: scale(1.048);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.575);
+}
+
 body {
     box-sizing: border-box;
+
 }
 
 html {
     font-family: "Lato", sans-serif;
-    background-color: #ffffff;
+    background-size: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+.topbar {
+    position: fixed;
+    top: 0; 
+    left: 0;              
+    height: 50px;             
+    width:100vw; 
+    background-color: #8b0000;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;      
+    box-shadow: 0 2px 5px rgba(252, 0, 0, 0.1);
+}
+
+.topbar img {
+    height: 40px;            
+    width: auto;
+    cursor: pointer;
+    margin-right: 30px;
 }
 
 #titulo{
     text-align: center;
     color: #8b0000;
-    text-shadow: 3px 5px 8px rgb(190, 71, 71);
     font-size: 25px;
-    margin-top: 20px;
+}
+
+.anton-regular { /*Clase para aplicar la fuente Anton*/
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+h1 {/*Para aplicar la fuente soolo al titulo*/
+    font-family: "Anton", sans-serif;
+    font-size: 50px;
+
+    margin: 50px 0 10px 0;
+}
+
+h3 {
+    font-family: "Lato", sans-serif;
+    font-size: 26px;
+    margin: 0px;
+    text-wrap: wrap;
 }
