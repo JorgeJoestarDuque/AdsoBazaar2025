@@ -32,23 +32,19 @@
 <h1>Estadisticas</h1>
 
 <div class="filters">
-<select id="opciones" name="Fechas">
-    <option value="opcion1" selected>Fecha actual</option>
-    <option value="opcion2">Fecha 2</option>
-    <option value="opcion3">Fecha 3</option>
+<select id="filterFechas" name="Fechas">
+    <option value="all" selected>Fecha actual</option>
 </select>
 
-<select id="opciones" name="Producto">
-    <option value="opcion1" selected>Tipo de producto</option>
-    <option value="opcion2">Tipo de producto 2</option>
-    <option value="opcion3">Tipo de producto 3</option>
+<select id="filterProducto" name="Producto">
+    <option value="all" selected>Todos los productos</option>
 </select>
 
-<select id="opciones" name="Categoria">
-    <option value="opcion1" selected>Categoria 1</option>
-    <option value="opcion2">Categoria 2</option>
-    <option value="opcion3">Categoria 3</option>
+<select id="filterCategoria" name="Categoria">
+    <option value="all" selected>Todas las categorías</option>
 </select>
+
+<button id="refreshAnalytics">Actualizar</button>
 </div>
 <div class="charts">
         <div class="chart">
@@ -59,91 +55,20 @@
         </div>
       </div>
 
-      <div class="advanced-filters">
-        <h2>Filtros avanzados</h2>
-        <select>
-          <option>Nombre del producto</option>
-        </select>
-        <select>
-          <option>Cantidad</option>
-        </select>
-      </div>
-    
     <div class="data">
     <h2>Datos</h2>
-    <table>
-        <tr>
-            <th>Nombre</th>
-            <th>Cantidad</th>
-            <th>Marca</th>
-            <th>Tipo</th>
-        </tr>
-        <tr>
-            <td>Ejemplo</td>
-            <td>10</td>
-            <td>Marca A</td>
-            <td>Tipo 1</td>
-        </tr>
-        <tr>
-            <td>Producto Alpha</td>
-            <td>15</td>
-            <td>Marca B</td>
-            <td>Tipo 2</td>
-        </tr>
-        <tr>
-            <td>Producto Beta</td>
-            <td>8</td>
-            <td>Marca C</td>
-            <td>Tipo 1</td>
-        </tr>
-        <tr>
-            <td>Producto Gamma</td>
-            <td>25</td>
-            <td>Marca A</td>
-            <td>Tipo 3</td>
-        </tr>
-        <tr>
-            <td>Producto Delta</td>
-            <td>12</td>
-            <td>Marca D</td>
-            <td>Tipo 2</td>
-        </tr>
-        <tr>
-            <td>Producto Epsilon</td>
-            <td>30</td>
-            <td>Marca B</td>
-            <td>Tipo 4</td>
-        </tr>
-        <tr>
-            <td>Producto Zeta</td>
-            <td>5</td>
-            <td>Marca E</td>
-            <td>Tipo 1</td>
-        </tr>
-        <tr>
-            <td>Producto Eta</td>
-            <td>18</td>
-            <td>Marca C</td>
-            <td>Tipo 3</td>
-        </tr>
-        <tr>
-            <td>Producto Theta</td>
-            <td>22</td>
-            <td>Marca A</td>
-            <td>Tipo 2</td>
-        </tr>
-        <tr>
-            <td>Producto Iota</td>
-            <td>14</td>
-            <td>Marca D</td>
-            <td>Tipo 4</td>
-        </tr>
-        <tr>
-            <td>Producto Kappa</td>
-            <td>7</td>
-            <td>Marca E</td>
-            <td>Tipo 3</td>
-        </tr>
+    <table id="productosTable">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Cantidad</th>
+                <th>Lote</th>
+                <th>Precio Venta</th>
+            </tr>
+        </thead>
+        <tbody id="tablebody">
+            <!-- Se rellena dinámicamente desde la API -->
+        </tbody>
     </table>
 </div>
 
