@@ -123,7 +123,8 @@ CREATE TABLE `usuario` (
   `Nombre` varchar(100) DEFAULT NULL,
   `Rol` varchar(50) DEFAULT NULL,
   `Telefono` bigint(20) DEFAULT NULL,
-  `Email` varchar(100) DEFAULT NULL
+  `Email` varchar(100) DEFAULT NULL,
+  `Password` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --

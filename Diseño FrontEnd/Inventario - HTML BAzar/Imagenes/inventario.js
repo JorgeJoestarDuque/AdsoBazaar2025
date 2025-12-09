@@ -165,6 +165,16 @@ async function actualizarProductoAPI(id, actualizado) {
     try { return JSON.parse(text); } catch(e){ return null; }
 }
 
+// ==================== OBTENER PRÓXIMO ID ====================
+function getNextId() {
+    if (productsCache.length === 0) return 1;
+    const maxId = Math.max(...productsCache.map(p => {
+        const id = p.id ?? p.idProducto;
+        return isNaN(id) ? 0 : Number(id);
+    }));
+    return maxId + 1;
+}
+
 // ==================== GUARDAR (CREATE/UPDATE) ====================
 async function guardarProducto() {
     console.log("guardarProducto -> llamada");
@@ -191,10 +201,10 @@ async function guardarProducto() {
             showToast("Producto actualizado correctamente.", "success");
             console.log("guardarProducto -> actualización OK");
         } else {
-            const genId = Date.now().toString();
-            nuevo.idProducto = genId;
-            const idNum = Number(genId);
-            if (!Number.isNaN(idNum)) nuevo.id = idNum;
+            const nextId = getNextId();
+            nuevo.idProducto = String(nextId);
+            nuevo.id = nextId;
+            console.log("guardarProducto -> ID generado:", nextId);
 
             await registrarProductoAPI(nuevo);
             showToast("Producto registrado correctamente.", "success");

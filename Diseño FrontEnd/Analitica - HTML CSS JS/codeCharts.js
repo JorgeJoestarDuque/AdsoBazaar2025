@@ -127,7 +127,7 @@ function renderTable(filteredProducts) {
       <td>${p.nombre || 'N/A'}</td>
       <td>${p.cantidad || 0}</td>
       <td>${p.Id_Lote || 'N/A'}</td>
-      <td>${p.precioVenta || '0'}</td>
+      <td>${'$ ' + (p.precioVenta || '0')}</td>
     `;
     tbody.appendChild(row);
   });

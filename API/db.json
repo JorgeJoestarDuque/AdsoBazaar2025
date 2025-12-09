@@ -1,36 +1,36 @@
 {
   "usuario": [
     {
-      "Email": "julian@gmail.com",
-      "NIT": "31343241341",
-      "Nombre": "julian Roa",
-      "Telefono": "231231412",
-      "Direccion": "Calle 321",
-      "Contrasena": "Qazplm123$"
-    },
-    {
       "NIT": "1010841138",
       "Nombre": "Jorge Duque",
-      "Email": "jorge.duque@hablame.co",
       "Rol": "admin",
       "Telefono": "3172338598",
-      "Contrasena": "Qazplm123$"
+      "Email": "jorge.duque@hablame.co",
+      "Password": "Qazplm123$"
     },
     {
       "NIT": "1029302391",
       "Nombre": "Julian Roa",
-      "Email": "jejulians@gmail.com",
       "Rol": "admin",
       "Telefono": "3163941080",
-      "Contrasena": "Qazplm123$"
+      "Email": "jejulians@gmail.com",
+      "Password": "Qazplm123$"
     },
     {
-      "NIT": "10101010101",
-      "Nombre": "Anderson Anderson",
-      "Email": "Anderson@anderson.anderson",
-      "Rol": "admin",
+      "NIT": "1080456123",
+      "Nombre": "Anderson Perez",
+      "Rol": "supervisor",
       "Telefono": "3123124312",
-      "Contrasena": "Anderson"
+      "Email": "anderson.perez@email.com",
+      "Password": "Qazplm123$"
+    },
+    {
+      "NIT": "1050789456",
+      "Nombre": "Maria Garcia",
+      "Rol": "cajero",
+      "Telefono": "3015678901",
+      "Email": "maria.garcia@email.com",
+      "Password": "Qazplm123$"
     }
   ],
   "proveedor": [
@@ -67,205 +67,214 @@
   ],
   "lote": [
     {
-      "Id_Lote": "1",
-      "Cantidad": "1",
-      "Tipo": "commerce.product",
-      "Precio_Compra": "589.3839451630422",
-      "NIP_Proveedor": "15067"
-    },
-    {
       "Id_Lote": "0",
-      "Cantidad": "1",
-      "Tipo": "commerce.product",
-      "Precio_Compra": "113.29478859429088",
-      "NIP_Proveedor": "95659"
+      "Cantidad": "180",
+      "Tipo": "Alimentos",
+      "Precio_Compra": "18500",
+      "NIP_Proveedor": "36614"
     },
     {
       "Id_Lote": "1",
-      "Cantidad": "0",
-      "Tipo": "commerce.product",
-      "Precio_Compra": "302.26701329072324",
-      "NIP_Proveedor": "92383"
+      "Cantidad": "135",
+      "Tipo": "Lácteos y Alimentos",
+      "Precio_Compra": "22000",
+      "NIP_Proveedor": "68494"
     },
     {
-      "Id_Lote": "0",
-      "Cantidad": "1",
-      "Tipo": "commerce.product",
-      "Precio_Compra": "237.872093260023",
-      "NIP_Proveedor": "78990"
+      "Id_Lote": "2",
+      "Cantidad": "95",
+      "Tipo": "Aseo y Limpieza",
+      "Precio_Compra": "7500",
+      "NIP_Proveedor": "89671"
     },
     {
-      "Id_Lote": "0",
-      "Cantidad": "0",
-      "Tipo": "commerce.product",
-      "Precio_Compra": "839.6907107102313",
-      "NIP_Proveedor": "16085"
+      "Id_Lote": "3",
+      "Cantidad": "110",
+      "Tipo": "Condimentos",
+      "Precio_Compra": "32000",
+      "NIP_Proveedor": "85216"
+    },
+    {
+      "Id_Lote": "4",
+      "Cantidad": "75",
+      "Tipo": "Bebidas",
+      "Precio_Compra": "5800",
+      "NIP_Proveedor": "17725"
     }
   ],
   "producto": [
     {
-      "idProducto": "0",
-      "nombre": "Modern Bronze Fish",
-      "precioVenta": "567.9910601871943",
-      "cantidad": "1",
-      "fechaCaducidad": "Sun Jul 19 2026 00:08:04 GMT-0500 (hora estándar de Colombia)",
-      "Id_Lote": "0"
-    },
-    {
-      "idProducto": "0",
-      "nombre": "Luxurious Bamboo Fish",
-      "precioVenta": "786.3266031926875",
-      "cantidad": "1",
-      "fechaCaducidad": "Wed Dec 24 2025 05:52:40 GMT-0500 (hora estándar de Colombia)",
-      "Id_Lote": "1"
-    },
-    {
       "idProducto": "1",
-      "nombre": "Awesome Cotton Gloves",
-      "precioVenta": "643.6320332979549",
-      "cantidad": "1",
-      "fechaCaducidad": "Sat Jan 24 2026 04:55:21 GMT-0500 (hora estándar de Colombia)",
-      "Id_Lote": "0"
+      "nombre": "Arroz Integral 5kg",
+      "precioVenta": "28500",
+      "cantidad": "45",
+      "fechaCaducidad": "2026-06-15",
+      "Id_Lote": "1",
+      "marca": "Alimentos Don Carlos",
+      "Tipo": "Alimentos"
     },
     {
-      "idProducto": "0",
-      "nombre": "Intelligent Wooden Ball",
-      "precioVenta": "691.4713311581713",
-      "cantidad": "1",
-      "fechaCaducidad": "Sat Apr 04 2026 12:02:35 GMT-0500 (hora estándar de Colombia)",
-      "Id_Lote": "1"
+      "idProducto": "2",
+      "nombre": "Aceite de Oliva Extra Virgen",
+      "precioVenta": "35000",
+      "cantidad": "28",
+      "fechaCaducidad": "2026-08-20",
+      "Id_Lote": "1",
+      "marca": "Sierra Nevada",
+      "Tipo": "Condimentos"
     },
     {
-      "idProducto": "1",
-      "nombre": "Unbranded Silk Soap",
-      "precioVenta": "745.3155295613363",
-      "cantidad": "0",
-      "fechaCaducidad": "Wed Apr 15 2026 16:50:30 GMT-0500 (hora estándar de Colombia)",
-      "Id_Lote": "0"
+      "idProducto": "3",
+      "nombre": "Pasta Integral 500g",
+      "precioVenta": "5500",
+      "cantidad": "120",
+      "fechaCaducidad": "2026-04-10",
+      "Id_Lote": "0",
+      "marca": "Barilla",
+      "Tipo": "Alimentos"
     },
     {
-      "tipo": "El mas gei ",
-      "gramaje": "0gr",
-      "marca": "jorge",
-      "fechaVencimiento": "2025-12-06",
-      "lote": "su papa",
-      "nombre": "Jorge",
-      "cantidad": 1,
-      "idProducto": "1765046110939",
-      "id": 1765046110939
+      "idProducto": "4",
+      "nombre": "Leche Descremada 1L",
+      "precioVenta": "4200",
+      "cantidad": "78",
+      "fechaCaducidad": "2025-12-20",
+      "Id_Lote": "0",
+      "marca": "Colanta",
+      "Tipo": "Lácteos"
+    },
+    {
+      "idProducto": "5",
+      "nombre": "Queso Fresco 500g",
+      "precioVenta": "18900",
+      "cantidad": "32",
+      "fechaCaducidad": "2026-01-10",
+      "Id_Lote": "1",
+      "marca": "Lácteos del Campo",
+      "Tipo": "Lácteos"
+    },
+    {
+      "idProducto": "6",
+      "nombre": "Jabón Líquido Neutro 1L",
+      "precioVenta": "8500",
+      "cantidad": "55",
+      "fechaCaducidad": "2026-12-31",
+      "Id_Lote": "0",
+      "marca": "Safeguard",
+      "Tipo": "Aseo"
     }
   ],
   "inventario": [
     {
       "idInventario": "0",
-      "fechaCreacion": "Tue Sep 02 2025 03:17:29 GMT-0500 (hora estándar de Colombia)",
-      "idProducto": "0",
-      "NIT": "7640686"
+      "fechaCreacion": "2025-09-02",
+      "idProducto": "1",
+      "NIT": "1010841138"
     },
     {
       "idInventario": "1",
-      "fechaCreacion": "Wed Nov 12 2025 12:15:26 GMT-0500 (hora estándar de Colombia)",
-      "idProducto": "1",
-      "NIT": "51731"
+      "fechaCreacion": "2025-11-12",
+      "idProducto": "2",
+      "NIT": "1029302391"
     },
     {
-      "idInventario": "0",
-      "fechaCreacion": "Sun Jan 26 2025 14:15:52 GMT-0500 (hora estándar de Colombia)",
-      "idProducto": "1",
-      "NIT": "4636072"
+      "idInventario": "2",
+      "fechaCreacion": "2025-01-26",
+      "idProducto": "3",
+      "NIT": "1080456123"
     },
     {
-      "idInventario": "0",
-      "fechaCreacion": "Sun Apr 27 2025 21:43:45 GMT-0500 (hora estándar de Colombia)",
-      "idProducto": "1",
-      "NIT": "8095506"
+      "idInventario": "3",
+      "fechaCreacion": "2025-04-27",
+      "idProducto": "4",
+      "NIT": "1050789456"
     },
     {
-      "idInventario": "1",
-      "fechaCreacion": "Tue Apr 29 2025 18:05:48 GMT-0500 (hora estándar de Colombia)",
-      "idProducto": "0",
-      "NIT": "1172054"
+      "idInventario": "4",
+      "fechaCreacion": "2025-04-29",
+      "idProducto": "5",
+      "NIT": "1010841138"
     }
   ],
   "factura": [
     {
-      "NumeroFactura": "0",
-      "Creacion": "Fri Nov 14 2025 22:34:16 GMT-0500 (hora estándar de Colombia)",
+      "NumeroFactura": "1001",
+      "Creacion": "2025-12-08T08:30:00",
       "IdProducto": "1",
-      "Precio": "374.1896610683216",
-      "NIT_Cajero": "1647733"
+      "Precio": "28500",
+      "NIT_Cajero": "1010841138"
     },
     {
-      "NumeroFactura": "1",
-      "Creacion": "Sat Nov 15 2025 04:44:57 GMT-0500 (hora estándar de Colombia)",
-      "IdProducto": "0",
-      "Precio": "137.82745339064317",
-      "NIT_Cajero": "9415205"
+      "NumeroFactura": "1002",
+      "Creacion": "2025-12-08T09:15:00",
+      "IdProducto": "3",
+      "Precio": "16500",
+      "NIT_Cajero": "1029302391"
     },
     {
-      "NumeroFactura": "0",
-      "Creacion": "Sat Nov 15 2025 14:50:02 GMT-0500 (hora estándar de Colombia)",
-      "IdProducto": "0",
-      "Precio": "210.59920239109343",
-      "NIT_Cajero": "6850364"
+      "NumeroFactura": "1003",
+      "Creacion": "2025-12-08T10:45:00",
+      "IdProducto": "4",
+      "Precio": "12600",
+      "NIT_Cajero": "1010841138"
     },
     {
-      "NumeroFactura": "1",
-      "Creacion": "Sat Nov 15 2025 03:21:13 GMT-0500 (hora estándar de Colombia)",
-      "IdProducto": "0",
-      "Precio": "972.2975037406088",
-      "NIT_Cajero": "7297139"
+      "NumeroFactura": "1004",
+      "Creacion": "2025-12-08T11:20:00",
+      "IdProducto": "2",
+      "Precio": "35000",
+      "NIT_Cajero": "1080456123"
     },
     {
-      "NumeroFactura": "1",
-      "Creacion": "Fri Nov 14 2025 17:09:32 GMT-0500 (hora estándar de Colombia)",
-      "IdProducto": "0",
-      "Precio": "234.8587493080526",
-      "NIT_Cajero": "3576183"
+      "NumeroFactura": "1005",
+      "Creacion": "2025-12-08T14:30:00",
+      "IdProducto": "5",
+      "Precio": "56700",
+      "NIT_Cajero": "1029302391"
     }
   ],
   "facturasalida": [
     {
       "Id_FacturaSalida": "0",
-      "NumeroFactura": "1"
-    },
-    {
-      "Id_FacturaSalida": "0",
-      "NumeroFactura": "0"
+      "NumeroFactura": "1001"
     },
     {
       "Id_FacturaSalida": "1",
-      "NumeroFactura": "0"
+      "NumeroFactura": "1002"
     },
     {
-      "Id_FacturaSalida": "1",
-      "NumeroFactura": "1"
+      "Id_FacturaSalida": "2",
+      "NumeroFactura": "1003"
     },
     {
-      "Id_FacturaSalida": "0",
-      "NumeroFactura": "1"
+      "Id_FacturaSalida": "3",
+      "NumeroFactura": "1004"
+    },
+    {
+      "Id_FacturaSalida": "4",
+      "NumeroFactura": "1005"
     }
   ],
   "informe": [
     {
       "Id_Informe": "0",
-      "Id_Inventario": "1"
-    },
-    {
-      "Id_Informe": "0",
-      "Id_Inventario": "1"
-    },
-    {
-      "Id_Informe": "0",
-      "Id_Inventario": "0"
-    },
-    {
-      "Id_Informe": "1",
       "Id_Inventario": "0"
     },
     {
       "Id_Informe": "1",
       "Id_Inventario": "1"
+    },
+    {
+      "Id_Informe": "2",
+      "Id_Inventario": "2"
+    },
+    {
+      "Id_Informe": "3",
+      "Id_Inventario": "3"
+    },
+    {
+      "Id_Informe": "4",
+      "Id_Inventario": "4"
     }
   ]
 }
