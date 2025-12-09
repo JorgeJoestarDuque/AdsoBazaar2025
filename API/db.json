@@ -31,6 +31,14 @@
       "Telefono": "3015678901",
       "Email": "maria.garcia@email.com",
       "Password": "Qazplm123$"
+    },
+    {
+      "NIT": "101010101011",
+      "Nombre": "Usuario Prueba",
+      "Email": "Hola@gmail.com",
+      "Rol": "admin",
+      "Telefono": "312543241",
+      "Contrasena": "Qazplm123$"
     }
   ],
   "proveedor": [
@@ -162,6 +170,17 @@
       "Id_Lote": "0",
       "marca": "Safeguard",
       "Tipo": "Aseo"
+    },
+    {
+      "tipo": "Grano",
+      "gramaje": "50gr",
+      "marca": "Corn Flakes",
+      "fechaVencimiento": "2025-12-17",
+      "lote": "ACB123",
+      "nombre": "Cereal azucarado",
+      "cantidad": 15,
+      "idProducto": "7",
+      "id": 7
     }
   ],
   "inventario": [
