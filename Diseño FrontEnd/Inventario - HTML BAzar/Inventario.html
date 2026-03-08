@@ -54,6 +54,7 @@
       <th>Cantidad</th>
       <th>Marca</th>
       <th>Tipo</th>
+      <th>Fecha de vencimiento</th>
     </tr>
   </thead>
   <tbody>
@@ -158,34 +159,7 @@
   </div>
 </div>
 
-<script>
-  
-  // Función para abrir un modal
-  function openModal(id) {
-    document.getElementById(id).style.display = "block";
-  }
-
-  // Función para cerrar un modal
-  function closeModal(id) {
-    document.getElementById(id).style.display = "none";
-  }
-
-  // Detectar clics en los botones cerrar
-  document.querySelectorAll('.close').forEach(btn => {
-    btn.addEventListener('click', () => {
-      closeModal(btn.getAttribute('data-modal'));
-    });
-  });
-
-  // Cerrar si se hace clic fuera del modal
-  window.addEventListener('click', (e) => {
-    if (e.target.classList.contains('modal')) {
-      e.target.style.display = 'none';
-    }
-  });
-</script>
-
 <!-- cargar lógica de inventario (no cambia estética) -->
-<script src="Imagenes/inventario.js"></script>
+<script src="inventario.js"></script>
 </body>
 </html>

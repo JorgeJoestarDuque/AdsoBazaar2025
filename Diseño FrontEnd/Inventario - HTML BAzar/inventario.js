@@ -225,8 +225,10 @@ async function guardarProducto() {
 function confirmDelete(id) {
     console.log("confirmDelete -> id:", id);
     pendingDeleteId = id;
+    const producto = productsCache.find(p => String(p.id ?? p.idProducto ?? '') === String(id));
+    const nombreProducto = producto ? producto.nombre : id;
     const text = document.getElementById("modal-delete-text");
-    if (text) text.textContent = `¿Eliminar producto id ${id}?`;
+    if (text) text.textContent = `¿Eliminar producto "${nombreProducto}"?`;
     openModal('modal-delete');
 }
 
