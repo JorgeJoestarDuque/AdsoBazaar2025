@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proveedores</title>
+    <link rel="stylesheet" href="CSS/proveedores.css">
+    <link rel="shortcut icon" href="../Inventario - HTML BAzar/Imagenes/Icono - inventario.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Barra Lateral -->
+<div class="sidebar">
+  <div class="user">
+    <img src="../Inventario - HTML BAzar/Imagenes/Usuario.png" alt="Usuario">
+  </div>
+
+  <ul class="menu">
+    <li onclick="window.location.href='../menu/menu.html'"><img src="../Inventario - HTML BAzar/Imagenes/Home.png" alt="Inicio"></li>
+    <li onclick="window.location.href='../Analitica - HTML CSS JS/analitica.html'"><img src="../Inventario - HTML BAzar/Imagenes/Finanza.png" alt="Dinero"></li>
+    <li><img src="../Inventario - HTML BAzar/Imagenes/Caja.png" alt="Caja"></li>
+  </ul>
+
+  <div class="settings">
+    <img src="../Inventario - HTML BAzar/Imagenes/Configuracion.png" alt="Configuración">
+  </div>
+</div>
+
+<!-- Barra superior -->
+<div class="topbar">
+  <img src="../menu/logoR.png" alt="Logo de la empresa">
+</div>
+
+<div class="contenido">
+
+<div class="acciones">
+  <input type="text" placeholder="Buscar proveedor por nombre, NIP, NIT, teléfono..." class="busqueda">
+
+  <div class="botones">
+    <button class="btn eliminar-seleccionados" style="display:none;">Eliminar seleccionados</button>
+  </div>
+</div>
+
+<!-- Contenido General -->
+  <h2 class="titulo-proveedores">Gestión de Proveedores</h2>
+  <table class="tabla-proveedores">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>NIP</th>
+        <th>NIT</th>
+        <th>Teléfono</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Se llena dinámicamente -->
+    </tbody>
+  </table>
+</div>
+
+<!-- Modal para Confirmar Eliminación -->
+<div id="modal-delete" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span class="close" data-modal="modal-delete">&times;</span>
+    <h3>Confirmar eliminación</h3>
+    <p id="modal-delete-text">¿Eliminar proveedor?</p>
+    <div style="display:flex; gap:8px; justify-content:flex-end; margin-top:12px;">
+      <button id="modal-delete-cancel" class="btn" type="button">Cancelar</button>
+      <button id="modal-delete-confirm" class="btn btn-eliminar" type="button">Eliminar</button>
+    </div>
+  </div>
+</div>
+
+<script src="proveedores.js"></script>
+</body>
+</html>

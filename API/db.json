@@ -31,14 +31,6 @@
       "Telefono": "3015678901",
       "Email": "maria.garcia@email.com",
       "Password": "Qazplm123$"
-    },
-    {
-      "NIT": "101010101011",
-      "Nombre": "Usuario Prueba",
-      "Email": "Hola@gmail.com",
-      "Rol": "admin",
-      "Telefono": "312543241",
-      "Contrasena": "Qazplm123$"
     }
   ],
   "proveedor": [
@@ -59,12 +51,6 @@
       "NIT": "164428",
       "Nombre": "Hessel, Kuhic and McGlynn",
       "Telefono": "935.393.7747"
-    },
-    {
-      "NIP": "85216",
-      "NIT": "1339890",
-      "Nombre": "Ortiz and Sons",
-      "Telefono": "664-935-8653 x6540"
     },
     {
       "NIP": "17725",
