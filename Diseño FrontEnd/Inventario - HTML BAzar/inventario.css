@@ -1,0 +1,203 @@
+/* 1. GENERAL Y VARIABLES */
+:root {
+    --sidebar-width: 10%; /* Ajusta a 15% si prefieres más ancho */
+    --color-principal: #8B0000;
+    --color-hover: #a10000;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    transition: margin-left 0.5s ease;
+    background-color: #f9f9f9;
+}
+
+/* 2. SIDEBAR (MENÚ LATERAL) */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: calc(var(--sidebar-width) * -1); /* Escondido a la izquierda */
+    width: var(--sidebar-width);
+    height: 100vh;
+    background-color: #971a1a;
+    transition: left 0.5s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+/* Clases de empuje */
+body.menu-open {
+    margin-left: var(--sidebar-width);
+}
+
+/* Iconos dentro de Sidebar */
+.sidebar img, .user img, .settings img {
+    width: 45px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.sidebar img:hover {
+    transform: scale(1.1);
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* 3. TOPBAR */
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    background-color: var(--color-principal);
+    position: sticky;
+    top: 0;
+    z-index: 1100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.topbar img {
+    height: 45px;            
+    width: auto;
+    cursor: pointer;
+    object-fit: contain; 
+}
+
+/* 4. BOTÓN HAMBURGUESA (SPANS) */
+.boton {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+.boton span {
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: white;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: transform 0.7s, width 0.5s;
+}
+
+.l1 { transform: translate(-50%, -15px); }
+.l2 { transform: translate(-50%, -50%); }
+.l3 { transform: translate(-50%, 10px); }
+
+/* Animación a X */
+.activo .l1 { transform: translate(-50%, -50%) rotate(45deg); }
+.activo .l2 { width: 0; }
+.activo .l3 { transform: translate(-50%, -50%) rotate(-45deg); }
+
+/* 5. CONTENIDO, TABLAS Y BUSCADOR */
+.contenido {
+    padding: 20px;
+}
+
+.titulo-productos {
+    text-align: center;
+    font-size: 40px;
+    color: var(--color-principal);
+    margin: 40px 0;
+}
+
+.acciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.busqueda {
+    flex: 1;
+    max-width: 480px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04) inset;
+    transition: border-color 0.3s;
+}
+
+.busqueda:focus {
+    outline: none;
+    border-color: var(--color-principal);
+}
+
+/* TABLA */
+.tabla-productos {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.tabla-productos thead th {
+    background: linear-gradient(180deg, #8B0000 0%, #6f0000 100%);
+    color: #fff;
+    padding: 15px;
+}
+
+.tabla-productos td {
+    padding: 12px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+/* 6. MODALES */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 25px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+}
+
+/* ESTILOS DE BOTONES */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn.agregar { background: #28a745; color: white; }
+.btn.eliminar { background: #dc3545; color: white; }
+.btn:hover { transform: translateY(-2px); opacity: 0.9; }

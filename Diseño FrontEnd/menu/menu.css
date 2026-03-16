@@ -162,3 +162,96 @@ h3 {
     margin: 0px;
     text-wrap: wrap;
 }
+
+.boton {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+span {
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.7s, width 0.5s;
+}
+
+.l1 { transform: translate(-50%, -15px); } 
+.l3 { transform: translate(-50%, 10px); } 
+
+/* --- Animación a la X--- */
+
+.activo .l1 {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.activo .l2 {
+    width: 0;
+}
+
+.activo .l3 {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+body {
+    margin: 0;
+    transition: margin-left 0.5s ease; 
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -10%; 
+    width: 10%;  
+    height: 100vh;
+    background-color: #971a1a; 
+    transition: left 0.5s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+body.menu-open {
+    margin-left: 10%;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 10px 20px;
+    background: #8B0000; 
+    position: relative;
+    z-index: 1100; 
+}
+
+.sidebar img {
+    width: 40px; 
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.sidebar .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; 
+}
