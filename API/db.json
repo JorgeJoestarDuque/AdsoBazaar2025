@@ -128,16 +128,6 @@
       "Tipo": "Alimentos"
     },
     {
-      "idProducto": "4",
-      "nombre": "Leche Descremada 1L",
-      "precioVenta": "4200",
-      "cantidad": "78",
-      "fechaCaducidad": "2025-12-20",
-      "Id_Lote": "0",
-      "marca": "Colanta",
-      "Tipo": "Lácteos"
-    },
-    {
       "idProducto": "5",
       "nombre": "Queso Fresco 500g",
       "precioVenta": "18900",
@@ -146,16 +136,6 @@
       "Id_Lote": "1",
       "marca": "Lácteos del Campo",
       "Tipo": "Lácteos"
-    },
-    {
-      "idProducto": "6",
-      "nombre": "Jabón Líquido Neutro 1L",
-      "precioVenta": "8500",
-      "cantidad": "55",
-      "fechaCaducidad": "2026-12-31",
-      "Id_Lote": "0",
-      "marca": "Safeguard",
-      "Tipo": "Aseo"
     },
     {
       "tipo": "Grano",
