@@ -1,3 +1,11 @@
+/**
+ * registro.js
+ * Sistema de registro de nuevos usuarios en la plataforma.
+ * - Captura datos del formulario de registro
+ * - Envia los datos a la API para crear una nueva cuenta
+ * - Maneja errores y redirecciona al login despues del registro
+ */
+
 document.getElementById("registroForm").addEventListener("submit", async (e) => {
     e.preventDefault();
     const usuario = {

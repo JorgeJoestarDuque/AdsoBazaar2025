@@ -1,6 +1,25 @@
-// Analytics charts backed by API data
-// Expects canvas elements with ids `barChart` and `pieChart` in the page.
-// Also expects filters: filterFechas, filterProducto, filterCategoria, refreshAnalytics (button).
+/**
+ * codeCharts.js
+ * Modulo de analisis y visualizacion de datos con graficos.
+ * - Obtiene datos de productos y lotes desde la API
+ * - Genera graficos de barras y pie charts usando Chart.js
+ * - Permite filtrar datos por producto, lote y categoria
+ */
+
+const btn = document.querySelector('#btn');
+const sidebar = document.querySelector('.sidebar');
+const body = document.body;
+
+btn.addEventListener('click', () => {
+    // 1. Animamos las rayitas del botón (la X)
+    btn.classList.toggle('activo');
+    
+    // 2. Abrimos/cerramos la barra lateral
+    sidebar.classList.toggle('active');
+    
+    // 3. Empujamos todo el contenido de la página
+    body.classList.toggle('menu-open');
+});
 
 const API_BASE = 'http://localhost:10000/api';
 

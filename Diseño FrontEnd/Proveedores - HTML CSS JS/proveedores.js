@@ -1,6 +1,10 @@
-// =======================================================
-// proveedores.js - Gestión de Proveedores
-// =======================================================
+/**
+ * proveedores.js
+ * Sistema de gestion de proveedores.
+ * - Carga y muestra la lista de proveedores desde la API
+ * - Permite buscar y eliminar proveedores
+ * - Gestiona modales de confirmacion y notificaciones
+ */
 
 console.log("proveedores.js cargado");
 
