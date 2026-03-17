@@ -1,5 +1,14 @@
+/**
+ * empleados.js
+ * Sistema de gestion de empleados.
+ * - Carga y muestra la lista de empleados desde la API
+ * - Permite buscar y eliminar empleados
+ * - Gestion de roles y datos de contacto
+ * - Maneja modales de confirmacion y notificaciones emergentes
+ */
+
 // =======================================================
-// empleados.js - Gestión de Empleados
+// empleados.js - Gestion de Empleados
 // =======================================================
 
 console.log("empleados.js cargado");

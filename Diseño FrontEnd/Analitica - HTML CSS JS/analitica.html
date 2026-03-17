@@ -4,28 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="analiticaStyle.css">
-    <link rel="icon" type="image/png" href="..\menu\icon.png">
+    <link rel="icon" type="image/png" href="../recursos/icon.png">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Estadisticas</title>
 </head>
 <body>
-<div class="sidebar">
-  <div class="user">
-    <img src="Recursos//Usuario.png" alt="Usuario">
-  </div>
-  
-  <ul class="menu">
-    <li onclick="window.location.href='../menu/menu.html'"><img src="Recursos//Home.png" alt="Inicio"></li>
-    <li><img src="Recursos//Finanza.png" alt="Dinero"></li>
-    <li onclick="window.location.href='../Inventario - HTML BAzar/Inventario.html'"><img src="Recursos//Caja.png" alt="Caja"></li>
-  </ul>
-  <div class="settings">
-    <img src="Recursos/Configuracion.png" alt="Configuración">
-  </div>
-
 <div class="topbar">
-  <img src="../menu/logoR.png" alt="Logo de la empresa">
+  <button id="btn" class="boton">
+      <span class="l1"></span>
+      <span class="l2"></span>
+      <span class="l3"></span>
+  </button>
+  <img onclick="window.location.href='../menu/menu.html'" src="../recursos/logoB.png" alt="Logo de la empresa">
 </div>
+<div class="sidebar">
+    <div class="user">
+        <img src="../recursos/Usuario.png" alt="Usuario">
+    </div>
+
+    <ul class="menu">
+        <li onclick="window.location.href='../menu/menu.html'">
+            <img src="../recursos/Home.png" alt="Inicio">
+        </li>
+        <li onclick="window.location.href='../Analitica - HTML CSS JS/analitica.html'">
+            <img src="../recursos/Finanza.png" alt="Dinero">
+        </li>
+        <li onclick="window.location.href='../inventario - HTML BAzar/Inventario.html'">
+            <img src="../recursos/Caja.png" alt="Caja">
+        </li>
+    </ul>
+
+    <div class="settings">
+        <img src="../recursos/Configuracion.png" alt="Configuración">
+    </div>
+</div>
+
 </div>
 
 <div class="contenido">

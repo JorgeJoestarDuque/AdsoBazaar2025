@@ -1,3 +1,11 @@
+/**
+ * validacion.js
+ * Maneja la validacion y autenticacion de usuarios.
+ * - Valida las credenciales de inicio de sesion contra la API
+ * - Almacena los datos del usuario en el navegador
+ * - Muestra notificaciones emergentes de estado (toasts)
+ */
+
 console.log('validacion.js loaded');
 
 const loginForm = document.getElementById('loginForm');

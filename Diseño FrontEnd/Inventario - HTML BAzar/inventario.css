@@ -16,6 +16,7 @@ body {
 .sidebar {
     position: fixed;
     top: 0;
+    bottom: 0;
     left: calc(var(--sidebar-width) * -1); /* Escondido a la izquierda */
     width: var(--sidebar-width);
     height: 100vh;
@@ -31,6 +32,10 @@ body {
 
 .sidebar.active {
     left: 0;
+}
+
+.settings {
+    margin-bottom: 40px;
 }
 
 /* Clases de empuje */
