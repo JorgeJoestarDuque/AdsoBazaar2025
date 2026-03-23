@@ -194,50 +194,66 @@ function getNextId() {
     return maxId + 1;
 }
 
-// ==================== GUARDAR (CREATE/UPDATE) ====================
-async function guardarProducto() {
-    console.log("guardarProducto -> llamada");
-    const nuevo = {
-        tipo: document.getElementById("tipo")?.value || '',
-        gramaje: document.getElementById("gramaje")?.value || '',
-        marca: document.getElementById("marca")?.value || '',
+// ==================== UTILIDADES DE FORMULARIO ====================
+function getFormData() {
+    return {
+        tipo: document.getElementById("tipo")?.value.trim() || '',
+        gramaje: document.getElementById("gramaje")?.value.trim() || '',
+        marca: document.getElementById("marca")?.value.trim() || '',
         fechaVencimiento: document.getElementById("fecha")?.value || '',
-        lote: document.getElementById("lote")?.value || '',
-        nombre: document.getElementById("nombre")?.value || '',
-        cantidad: (document.getElementById("cantidad")?.value !== '') ? parseInt(document.getElementById("cantidad")?.value) || 0 : 0
+        lote: document.getElementById("lote")?.value.trim() || '',
+        nombre: document.getElementById("nombre")?.value.trim() || '',
+        cantidad: parseInt(document.getElementById("cantidad")?.value, 10) || 0
     };
+}
 
-    console.log("guardarProducto -> datos del formulario:", nuevo);
+function resetFormState() {
+    editingId = null;
+    const form = document.getElementById("form-add");
+    if (form) form.reset();
+
+    const btnRegistrar = document.getElementById("btn-registrar");
+    if (btnRegistrar) btnRegistrar.textContent = "Registrar";
+}
+
+// ==================== GUARDAR (CREATE/UPDATE) ====================
+
+
+async function guardarProducto() {
+    const nuevo = getFormData();
 
     if (!nuevo.nombre) {
-        showToast("El nombre es obligatorio.", "error");
+        showToast("Debes ingresar el nombre del producto.", "error");
+        return;
+    }
+
+    if (nuevo.cantidad < 0) {
+        showToast("La cantidad no puede ser negativa.", "error");
         return;
     }
 
     try {
         if (editingId) {
+            nuevo.id = editingId;
+            nuevo.idProducto = editingId;
             await actualizarProductoAPI(editingId, nuevo);
             showToast("Producto actualizado correctamente.", "success");
-            console.log("guardarProducto -> actualización OK");
         } else {
-            const nextId = getNextId();
-            nuevo.idProducto = String(nextId);
-            nuevo.id = nextId;
-            console.log("guardarProducto -> ID generado:", nextId);
-
+            const nuevoId = String(getNextId());
+            nuevo.id = nuevoId;
+            nuevo.idProducto = nuevoId;
             await registrarProductoAPI(nuevo);
             showToast("Producto registrado correctamente.", "success");
-            console.log("guardarProducto -> registro OK");
         }
-
-        editingId = null;
-        document.getElementById("form-add")?.reset();
-        closeModal("modal-add");
-        await cargarProductos();
     } catch (err) {
         console.error("guardarProducto error:", err);
-        showToast("No se pudo guardar el producto. Revisa la consola.", "error");
+        showToast(editingId ? "Error al actualizar producto." : "Error al registrar producto.", "error");
+        return;
     }
+
+    resetFormState();
+    closeModal("modal-add");
+    await cargarProductos();
 }
 
 // ==================== CONFIRMACIÓN ELIMINAR ====================
@@ -324,9 +340,11 @@ function fillFormForEdit(p) {
     document.getElementById("lote").value = p.lote ?? '';
     document.getElementById("nombre").value = p.nombre ?? '';
     document.getElementById("cantidad").value = p.cantidad ?? 0;
-    editingId = (p.id ?? p.idProducto ?? '') + '';
-    const btn = document.querySelector(".btn-registrar");
-    if (btn) btn.textContent = "Guardar cambios";
+
+    editingId = String(p.id ?? p.idProducto ?? ''); 
+    
+    const btnRegistrar = document.getElementById("btn-registrar");
+    if (btnRegistrar) btnRegistrar.textContent = "Guardar cambios";
 }
 
 function formatDateForInput(val) {
@@ -366,17 +384,25 @@ document.addEventListener("DOMContentLoaded", () => {
     if (addBtn) {
         addBtn.addEventListener("click", () => {
             editingId = null;
-            const btn = document.querySelector(".btn-registrar");
+            const btn = document.getElementById("btn-registrar");
             if (btn) btn.textContent = "Registrar";
             document.getElementById("form-add")?.reset();
             openModal('modal-add');
         });
     }
 
-    const btnRegistrar = document.querySelector(".btn-registrar");
+    const btnRegistrar = document.getElementById("btn-registrar");
     if (btnRegistrar) {
         btnRegistrar.addEventListener("click", guardarProducto);
         console.log("Listener btn-registrar enlazado");
+    }
+
+    const btnCancelar = document.getElementById("btn-cancelar");
+    if (btnCancelar) {
+        btnCancelar.addEventListener("click", () => {
+            resetFormState();
+            closeModal('modal-add');
+        });
     }
 
     const delCancel = document.getElementById("modal-delete-cancel");
@@ -395,7 +421,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    const searchInput = document.querySelector('.busqueda');
+    const searchInput = document.querySelector('.busqueda-inventario');
     if (searchInput) {
         searchInput.addEventListener('input', debounce((e) => {
             filtrarProductos(e.target.value);

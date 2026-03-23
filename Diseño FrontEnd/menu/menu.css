@@ -34,10 +34,9 @@
 
 #empleados {
     background-color: #a00000;
-    display:block;
+    display:grid;
     width: 200px;
-    height: 290px;
-    color: yellow;
+    height: 300px;
     padding: 20px 20px 50px 20px;
     border-radius: 10px;
     border: 4px solid black;

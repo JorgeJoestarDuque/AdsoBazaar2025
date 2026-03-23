@@ -1,0 +1,39 @@
+/* ========================================
+   INVENTARIO-ESTILOS.CSS - Estilos Específicos de Inventario
+   ======================================== */
+
+/* --- BOTONES PRINCIPALES --- */
+
+.btn.agregar {
+    background-color: #28a745; /* Verde bonito */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.btn.agregar:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+
+/* Ajuste del formulario dentro del modal */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-field.full {
+    grid-column: span 2;
+}
+
+.form-field input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

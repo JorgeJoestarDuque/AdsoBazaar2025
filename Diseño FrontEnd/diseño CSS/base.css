@@ -1,0 +1,379 @@
+/* ========================================
+   BASE.CSS - Estilos Globales y Comunes
+   Contiene: Sidebar, Topbar, Variables, Tipografía, Componentes base
+   ======================================== */
+
+/* 1. VARIABLES GLOBALES */
+:root {
+    --sidebar-width: 10%;
+    --color-principal: #8B0000;
+    --color-hover: #a10000;
+    --color-background: #f9f9f9;
+    --color-white: #ffffff;
+    --color-text: #222222;
+    --font-main: 'Lato', sans-serif;
+    --font-title: 'Anton', sans-serif;
+}
+
+/* 2. RESET Y CONFIGURACIÓN GENERAL */
+html {
+    font-family: var(--font-main);
+    background-size: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-main);
+    transition: margin-left 0.5s ease;
+    background-color: var(--color-background);
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* 3. SIDEBAR (MENÚ LATERAL) */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: calc(var(--sidebar-width) * -1);
+    width: var(--sidebar-width);
+    height: 100vh;
+    background-color: #971a1a;
+    transition: left 0.5s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar img,
+.user img,
+.settings img {
+    width: 45px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.sidebar img:hover,
+.user img:hover,
+.settings img:hover {
+    transform: scale(1.1);
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.settings {
+    margin-bottom: 40px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu img {
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+/* Clase para empujar contenido cuando el sidebar está abierto */
+body.menu-open {
+    margin-left: var(--sidebar-width);
+}
+
+/* 4. TOPBAR (BARRA SUPERIOR) */
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    background-color: var(--color-principal);
+    position: sticky;
+    top: 0;
+    z-index: 1100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.topbar img {
+    height: 45px;
+    width: auto;
+    cursor: pointer;
+    object-fit: contain;
+}
+
+/* 5. BOTÓN HAMBURGUESA */
+.boton {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.boton span {
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: white;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: transform 0.7s, width 0.5s;
+}
+
+.l1 { transform: translate(-50%, -15px); }
+.l2 { transform: translate(-50%, -50%); }
+.l3 { transform: translate(-50%, 10px); }
+
+/* Animación a X */
+.boton.activo .l1 { transform: translate(-50%, -50%) rotate(45deg); }
+.boton.activo .l2 { width: 0; }
+.boton.activo .l3 { transform: translate(-50%, -50%) rotate(-45deg); }
+
+.btn-logout {
+    background-color: var(--color-principal);
+    color: white;
+    border: 1px solid #fff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: var(--color-hover);
+}
+
+/* 7. TÍTULO PRINCIPAL */
+.titulo {
+    text-align: center;
+    color: var(--color-principal);
+    font-size: 25px;
+    padding-top: 70px;
+}
+
+#titulo {
+    text-align: center;
+    color: var(--color-principal);
+    font-size: 25px;
+}
+
+h1 {
+    font-family: var(--font-title);
+    font-size: 50px;
+    margin: 50px 0 10px 0;
+    color: var(--color-principal);
+    text-align: center;
+}
+
+h3 {
+    font-family: var(--font-main);
+    font-size: 26px;
+    margin: 0px;
+    text-wrap: wrap;
+    color: var(--color-text);
+}
+
+h2 {
+    color: var(--color-principal);
+    margin-bottom: 10px;
+}
+
+/* 8. TIPOGRAFÍA */
+.anton-regular {
+    font-family: var(--font-title);
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 9. IMÁGENES Y BOTONES */
+img{
+    max-width: 100%;
+    max-height:100%; /* Asegura que la imagen no exceda el ancho del contenedor */ 
+}
+
+button {
+    border-radius: 20px;
+    border: 2px solid #000000;
+    font-family: var(--font-main);
+    cursor: pointer;
+}
+
+button:hover {
+    transition: 0.3s;
+    transform: scale(1.048);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.575);
+}
+
+
+.acciones-form {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+.btn-acciones {
+    background-color: #8B0000;
+    color: white;
+    flex: 1;
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    font-weight: bold;
+}
+
+
+/* --- BOTONES DE ACCIÓN EN TABLA --- */
+
+.btn-accion.editar {
+    background-color: #ffb300; /* Amarillo bonito */
+}
+
+.btn-accion.editar:hover {
+    background-color: #ede908;
+}
+
+.btn-accion.eliminar {
+    background-color: #c12727; /* Rojo suave bonito */
+}
+
+.btn-accion.eliminar:hover {
+    background-color: #ff4d4d;
+}
+
+/* 10. CONTENIDO */
+.contenido {
+    margin-top: 70px;
+    padding: 20px;
+}
+
+/* 11. BUSCADOR COMÚN */
+.acciones {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;         
+    margin: 40px auto;   
+    padding: 0 5%;      
+    width: 100%;        
+}
+
+.busqueda{
+    flex: 0 0 70%;    
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Efecto al hacer clic en el buscador */
+.busqueda:focus{
+    outline: none;
+    border-color: #8B0000; /* Borde color vino al escribir */
+    box-shadow: 0 4px 10px rgba(139, 0, 0, 0.1);
+}
+
+
+/* 12. TABLAS */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    margin: 20px auto;
+}
+
+table thead th {
+    background: linear-gradient(180deg, #8B0000 0%, #6f0000 100%);
+    color: var(--color-white);
+    font-weight: 700;
+    padding: 14px 18px;
+    letter-spacing: 0.02em;
+    font-size: 15px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.06);
+}
+
+table td {
+    padding: 12px 18px;
+    font-size: 15px;
+    color: var(--color-text);
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    background: var(--color-white);
+}
+
+table tbody tr:nth-child(even) td {
+    background: #fbfbfb;
+}
+
+table tbody tr:hover td {
+    background: linear-gradient(90deg, rgba(255, 245, 245, 0.8), var(--color-white));
+    transform: translateY(-1px);
+    transition: background 120ms ease, transform 120ms ease;
+}
+
+/* 13. Modals */
+.modal {
+    display: none; /* Se activa con JS */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* Fondo oscuro */
+    backdrop-filter: blur(5px); /* Efecto borroso */
+}
+
+.modal-title {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #8B0000; /* Título en color vino */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 50%; /* Ancho del formulario */
+    box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+    position: relative;
+}

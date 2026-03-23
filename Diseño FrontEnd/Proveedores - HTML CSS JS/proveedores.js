@@ -5,7 +5,20 @@
  * - Permite buscar y eliminar proveedores
  * - Gestiona modales de confirmacion y notificaciones
  */
+const btn = document.querySelector('#btn');
+const sidebar = document.querySelector('.sidebar');
+const body = document.body;
 
+btn.addEventListener('click', () => {
+    // 1. Animamos las rayitas del boton (la X)
+    btn.classList.toggle('activo');
+    
+    // 2. Abrimos/cerramos la barra lateral
+    sidebar.classList.toggle('active');
+    
+    // 3. Empujamos todo el contenido de la pagina
+    body.classList.toggle('menu-open');
+});
 console.log("proveedores.js cargado");
 
 const API_BASE = "http://localhost:10000/api/proveedor";

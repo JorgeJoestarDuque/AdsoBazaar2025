@@ -4,33 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empleados</title>
-    <link rel="stylesheet" href="CSS/empleados.css">
+    <link rel="stylesheet" href="../diseño CSS/base.css">
+    <link rel="stylesheet" href="empleados-estilos.css">
     <link rel="shortcut icon" href="../recursos/Icono - inventario.png">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <!-- Barra Lateral -->
-<div class="sidebar">
-  <div class="user">
-    <img src="../recursos/Usuario.png" alt="Usuario">
+  <div id="titulo">
+  <div class="topbar">
+      <button id="btn" class="boton">
+          <span class="l1"></span>
+          <span class="l2"></span>
+          <span class="l3"></span>
+      </button>
+      <img src="../recursos/logoB.png" alt="Logo de la empresa">
+      <button class="btn-logout" onclick="window.location.href='../inicioRegistro/inicioSesion.html'">Cerrar Sesión</button>
   </div>
-  
-  <ul class="menu">
-    <li onclick="window.location.href='../menu/menu.html'"><img src="../recursos/Home.png" alt="Inicio"></li>
-    <li onclick="window.location.href='../Analitica - HTML CSS JS/analitica.html'"><img src="../recursos/Finanza.png" alt="Dinero"></li>
-    <li onclick="window.location.href='../Inventario - HTML BAzar/Inventario.html'"><img src="../recursos/Caja.png" alt="Caja"></li>
-  </ul>
-  
-  <div class="settings">
-    <img src="../recursos/Configuracion.png" alt="Configuración">
-  </div>
-</div>
+  <div class="sidebar">
+      <div class="user">
+          <img src="../recursos/Usuario.png" alt="Usuario">
+      </div>
 
-<!-- Barra superior -->
-<div class="topbar">
-  <img src="../recursos/logoR.png" alt="Logo de la empresa">
-</div>
+      <ul class="menu">
+          <li onclick="window.location.href='../menu/menu.html'">
+              <img src="../recursos/Home.png" alt="Inicio">
+          </li>
+          <li onclick="window.location.href='../Analitica - HTML CSS JS/analitica.html'">
+              <img src="../recursos/Finanza.png" alt="Dinero">
+          </li>
+          <li onclick="window.location.href='../Inventario - HTML BAzar/Inventario.html'">
+              <img src="../recursos/Caja.png" alt="Caja">
+          </li>
+      </ul>
+
+      <div class="settings">
+          <img src="../recursos/Configuracion.png" alt="Configuración">
+      </div>
+  </div>
 
 <div class="contenido">
 
@@ -68,8 +80,8 @@
     <h3>Confirmar eliminación</h3>
     <p id="modal-delete-text">¿Eliminar empleado?</p>
     <div style="display:flex; gap:8px; justify-content:flex-end; margin-top:12px;">
-      <button id="modal-delete-cancel" class="btn" type="button">Cancelar</button>
-      <button id="modal-delete-confirm" class="btn btn-eliminar" type="button">Eliminar</button>
+      <button id="modal-delete-cancel" class="btn-acciones" type="button">Cancelar</button>
+      <button id="modal-delete-confirm" class="btn-acciones" type="button">Eliminar</button>
     </div>
   </div>
 </div>

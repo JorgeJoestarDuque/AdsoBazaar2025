@@ -23,14 +23,6 @@
       "Telefono": "3123124312",
       "Email": "anderson.perez@email.com",
       "Password": "Qazplm123$"
-    },
-    {
-      "NIT": "1050789456",
-      "Nombre": "Maria Garcia",
-      "Rol": "cajero",
-      "Telefono": "3015678901",
-      "Email": "maria.garcia@email.com",
-      "Password": "Qazplm123$"
     }
   ],
   "proveedor": [
@@ -101,11 +93,16 @@
       "idProducto": "1",
       "nombre": "Arroz Integral 5kg",
       "precioVenta": "28500",
-      "cantidad": "45",
+      "cantidad": 45,
       "fechaCaducidad": "2026-06-15",
       "Id_Lote": "1",
       "marca": "Alimentos Don Carlos",
-      "Tipo": "Alimentos"
+      "Tipo": "Alimentos",
+      "tipo": "Grano",
+      "gramaje": "",
+      "fechaVencimiento": "2026-06-15",
+      "lote": "",
+      "id": "1"
     },
     {
       "idProducto": "2",
@@ -147,6 +144,17 @@
       "cantidad": 15,
       "idProducto": "7",
       "id": 7
+    },
+    {
+      "tipo": "Limpieza",
+      "gramaje": "500 L",
+      "marca": "Safeguard",
+      "fechaVencimiento": "2026-03-03",
+      "lote": "CC123",
+      "nombre": "Jabón Líquido Neutro 1L",
+      "cantidad": 50,
+      "id": "8",
+      "idProducto": "8"
     }
   ],
   "inventario": [
