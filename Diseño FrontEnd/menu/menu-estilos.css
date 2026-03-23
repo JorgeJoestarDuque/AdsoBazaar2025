@@ -1,0 +1,52 @@
+/* ========================================
+   MENU-ESTILOS.CSS - Estilos Específicos del Menú Principal
+   ======================================== */
+
+/* Contenedor de las tarjetas */
+#tarjetas {
+    display: flex;
+    flex-wrap: wrap;       /* Permite que las tarjetas bajen si no caben */
+    justify-content: center; /* Centra las tarjetas */
+    padding: 40px 20px;
+    gap: 25px;             /* Espacio entre tarjetas */
+}
+
+/* Estilos comunes para tarjetas (ID's combinados) */
+#inventario,
+#estadisticas,
+#empleados,
+#proveedores {
+    background-color: #a00000;
+    flex: 1 1 250px;       /* Flex-grow, flex-shrink, y un ancho base de 250px */
+    max-width: 300px;      /* Para que no se estiren demasiado en pantallas gigantes */
+    min-height: 400px;     /* Altura mínima para que todas se vean iguales */
+    padding: 25px;
+    display: flex;         /* Cambiamos de grid a flex para mejor control */
+    flex-direction: column;
+    align-items: center;   /* Centra el botón/imagen */
+    border-radius: 15px;
+    border: 4px solid black;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2); /* Un toque de sombra para profundidad */
+}
+
+/* Ajuste de los párrafos para que no se desborden */
+#tarjetas p {
+    margin-top: 20px;
+    font-size: 16px;       /* Tamaño de fuente legible */
+    line-height: 1.5;      /* Espaciado entre líneas */
+    word-wrap: break-word;
+    text-align: center;    /* Se ve más ordenado centrado en este diseño */
+    color: white;
+}
+
+/* Ajuste del botón para que la imagen no se salga */
+#tarjetas button {
+    width: 120px;          /* Tamaño fijo para el botón circular/cuadrado */
+    height: 120px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;      /* Corta lo que se salga del borde redondeado */
+}
+
