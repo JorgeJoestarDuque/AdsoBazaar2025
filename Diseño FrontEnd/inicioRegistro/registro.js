@@ -6,6 +6,10 @@
  * - Maneja errores y redirecciona al login despues del registro
  */
 
+function redirigir() {
+    window.location.href = 'inicioSesion.html';
+}
+
 document.getElementById("registroForm").addEventListener("submit", async (e) => {
     e.preventDefault();
     const usuario = {
@@ -28,22 +32,57 @@ document.getElementById("registroForm").addEventListener("submit", async (e) => 
         if (!resp.ok) {
             const err = await resp.json().catch(() => ({ message: resp.statusText }));
             console.error('Error response:', resp.status, err);
-            alert('Error al registrar: ' + (err.message || resp.statusText));
+            showToast('Error al registrar: ' + (err.message || resp.statusText), 'error', duration = 2000);
             return;
         }
 
         const created = await resp.json();
         console.log('Usuario creado:', created);
-        alert('Usuario registrado con éxito.');
+        await showToast('Usuario registrado con éxito.', 'info', duration = 2000);
         // opcional: limpiar formulario
         document.getElementById('registroForm').reset();
         redirigir();
     } catch (error) {
         console.error('Fetch error:', error);
-        alert('Error de conexión al registrar usuario. Revisa la consola.');
+        await showToast('Error de conexión al registrar usuario. Revisa la consola.', 'warning', duration = 2000);
     }
 });
 
-function redirigir() {
-    window.location.href = 'inicioSesion.html';
+
+// Toast utility: crea un aviso en la esquina superior derecha que desaparece solo.
+function showToast(message, type = 'info', duration = 4000) {
+  // Reusar toast existente si hay
+  let container = document.getElementById('toast-container');
+  if (!container) {
+    container = document.createElement('div');
+    container.id = 'toast-container';
+    container.className = 'toast-container';
+    document.body.appendChild(container);
+  }
+
+  const toast = document.createElement('div');
+  toast.className = 'toast-item';
+  toast.textContent = message;
+  toast.classList.add(type === 'error' ? 'error' : (type === 'warning' ? 'warning' : 'info'));
+  container.appendChild(toast);
+
+  // selección de clase CSS para mostrar
+  void toast.offsetWidth;
+  toast.classList.add('show');
+
+  // Devuelve una promesa que se resuelve cuando el toast desaparece
+  return new Promise((resolve) => {
+    const timeout = setTimeout(() => {
+      toast.classList.remove('show');
+      // quitar después de la transición
+      setTimeout(() => { toast.remove(); if (!container.hasChildNodes()) container.remove(); resolve(); }, 260);
+    }, duration);
+
+    // click para quitar y resolver inmediatamente
+    toast.addEventListener('click', () => {
+      clearTimeout(timeout);
+      toast.classList.remove('show');
+      setTimeout(() => { toast.remove(); if (!container.hasChildNodes()) container.remove(); resolve(); }, 220);
+    });
+  });
 }

@@ -23,6 +23,54 @@
       "Telefono": "3123124312",
       "Email": "anderson.perez@email.com",
       "Password": "Qazplm123$"
+    },
+    {
+      "NIT": "1234561",
+      "Nombre": "Test",
+      "Email": "Test@gmail.com",
+      "Rol": "admin",
+      "Telefono": "3125341210",
+      "Contrasena": "wdqwedads"
+    },
+    {
+      "NIT": "1234561231",
+      "Nombre": "Test",
+      "Email": "usuarioprueba@gmail.com",
+      "Rol": "admin",
+      "Telefono": "3125341210",
+      "Contrasena": "fvcewdwed2323"
+    },
+    {
+      "NIT": "12345612131",
+      "Nombre": "Test",
+      "Email": "Test@gmail.com",
+      "Rol": "admin",
+      "Telefono": "3125341210",
+      "Contrasena": "asd12d"
+    },
+    {
+      "NIT": "123431231231",
+      "Nombre": "Test",
+      "Email": "Test@gmail.com",
+      "Rol": "admin",
+      "Telefono": "3125341210",
+      "Contrasena": "d323d32e23"
+    },
+    {
+      "NIT": "1234123141",
+      "Nombre": "Test",
+      "Email": "Test@gmail.com",
+      "Rol": "admin",
+      "Telefono": "3125341210",
+      "Contrasena": "d2e12s2q"
+    },
+    {
+      "NIT": "1231241414",
+      "Nombre": "Test",
+      "Email": "Test@gmail.com",
+      "Rol": "admin",
+      "Telefono": "3125341210",
+      "Contrasena": "dve223r1231"
     }
   ],
   "proveedor": [
