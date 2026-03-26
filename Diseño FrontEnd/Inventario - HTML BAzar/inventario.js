@@ -122,16 +122,16 @@ function renderProductos(list) {
             <td class="acciones">
                 <button class="btn-accion editar" type="button" title="Editar" onclick="abrirEditar('${pid}')" aria-label="Editar">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25z" fill="currentColor"/>
-                        <path d="M20.71 7.04a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" fill="currentColor"/>
+                        <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25z" fill="white"/>
+                        <path d="M20.71 7.04a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" fill="white"/>
                     </svg>
                 </button>
                 <button class="btn-accion eliminar" type="button" title="Eliminar" onclick="confirmDelete('${pid}')" aria-label="Eliminar">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path d="M6 7h12v13a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V7z" fill="currentColor"/>
-                        <path d="M9 4h6v2H9z" fill="currentColor"/>
-                        <path d="M10 11v6" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/>
-                        <path d="M14 11v6" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/>
+                        <path d="M6 7h12v13a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V7z" fill="white"/>
+                        <path d="M9 4h6v2H9z" fill="white"/>
+                        <path d="M10 11v6" stroke="#8B0000" stroke-width="1.4" stroke-linecap="round"/>
+                        <path d="M14 11v6" stroke="#8B0000" stroke-width="1.4" stroke-linecap="round"/>
                     </svg>
                 </button>
             </td>
